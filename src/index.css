@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --bg-clr-primary: #534f4f9d;
+  --clr-secondary: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.main {
+  display: grid;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.option-container {
+  display: grid;
+  gap: 10px;
+}
+.btn-option {
+  background-color: #86787858;
+  color: white;
+  padding-bottom: 6px;
+  font: 1.3em sans-serif;
+  border-radius: 15px;
+  border: none;
+}
+.btn-option:hover {
+  background-color: #787474f3;
+  font-size: larger;
+  color: white;
+}
+.btn-option.answer {
+  background-color: aqua;
+}
+
+.btn-option.wrong {
+  background-color: rgba(225, 96, 96, 0.977);
+}
+.btn-option.correct {
+  background-color: rgb(99, 81, 236);
+}
+.pointQuestion {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+progress {
+  width: 100%;
+}
+.btn-question {
+  display: inline-block;
+  text-align: center;
+  margin-right: auto;
+}
+
+.nextQuestion {
+  padding: 5px;
+  background-color: var(--bg-clr-primary);
+  border-radius: 5px;
+  outline-style: none;
+  border: none;
+  width: 3rem;
+  color: var(--clr-secondary);
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin-right: 4px;
+}
+
+.timer,
+.nextQuestion {
+  padding: 5px 10px;
+  background-color: var(--bg-clr-primary);
+  border-radius: 10px;
+  max-width: 6rem;
+  color: var(--clr-secondary);
+  text-align: center;
+  font-size: large;
 }
